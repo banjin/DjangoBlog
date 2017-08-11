@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 from django.db import models
 from django.utils.six import python_2_unicode_compatible

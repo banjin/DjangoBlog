@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 from django.shortcuts import render, get_object_or_404, redirect
 from blogapp.models import Post
