@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from ..models import Post,Category
 from django import template
 
