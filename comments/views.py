@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 from django.shortcuts import render, get_object_or_404, redirect
 from blogapp.models import Post
 

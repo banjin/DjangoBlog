@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from django.conf.urls import url
 from . import views #从当前目录下导入了 views 模块
