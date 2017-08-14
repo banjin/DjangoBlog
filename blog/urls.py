@@ -19,7 +19,7 @@ from django.conf.urls import url,include
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^admin/', '45.32.37.140'),#admin.site.urls
+    url(r'^admin/', admin.site.urls),
 	url(r'', include('blogapp.urls')),
     url(r'', include('comments.urls')),
 ]
