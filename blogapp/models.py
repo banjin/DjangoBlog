@@ -90,4 +90,8 @@ class Post(models.Model):
         return reverse('blogapp:detail', kwargs={'pk': self.pk})
     class Meta:
         ordering = ['-created_time']
+    views = models.PositiveIntegerField(default=0)
+    def increase_views(self):
+        self.views += 1
+        self.save(update_fields=['views'])
 # Create your models here.
