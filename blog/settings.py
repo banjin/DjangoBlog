@@ -29,7 +29,10 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost ', '.blogof33.com']
 
-
+SESSION_COOKIE_SECURE=True
+SESSION_COOKIE_HTTPONLY=True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTOCOL', 'https')
+SESSION_COOKIE_SECURE = True
 # Application definition
 
 INSTALLED_APPS = [
