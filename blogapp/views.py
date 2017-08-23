@@ -5,6 +5,8 @@ from .models import Post,Category
 import markdown
 from comments.forms import CommentForm
 from django.views.generic import ListView,DetailView
+from django.utils.text import slugify
+from markdown.extensions.toc import TocExtension
 def index(request):
     post_list = Post.objects.all().order_by('-created_time')
     return render(request, 'blog/index.html', context={'post_list': post_list})
@@ -218,13 +220,13 @@ class PostDetailView(DetailView):
 
     def get_object(self, queryset=None):
         # 覆写 get_object 方法的目的是因为需要对 post 的 body 值进行渲染
-        post = super(PostDetailView, self).get_object(queryset=None)
-        post.body = markdown.markdown(post.body,
-                                      extensions=[
+        md = markdown.markdown(extensions=[
                                           'markdown.extensions.extra',
                                           'markdown.extensions.codehilite',
-                                          'markdown.extensions.toc',
+                                          TocExtension(slugify=slugify),
                                       ])
+        post.body=md.convert(post.body)
+        post.toc=md.poc
         return post
 
     def get_context_data(self, **kwargs):
