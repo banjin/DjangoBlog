@@ -220,13 +220,14 @@ class PostDetailView(DetailView):
 
     def get_object(self, queryset=None):
         # 覆写 get_object 方法的目的是因为需要对 post 的 body 值进行渲染
-        md = markdown.markdown(extensions=[
+        post = super(PostDetailView, self).get_object(queryset=None)
+        md = markdown.Markdown(extensions=[
                                           'markdown.extensions.extra',
                                           'markdown.extensions.codehilite',
                                           TocExtension(slugify=slugify),
                                       ])
         post.body=md.convert(post.body)
-        post.toc=md.poc
+        post.toc=md.toc
         return post
 
     def get_context_data(self, **kwargs):
