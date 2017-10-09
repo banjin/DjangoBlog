@@ -1,6 +1,8 @@
 $(document).ready(function() {
 	$('#myRoundabout').roundabout({
-		 shape: 'figure8',
-		 minOpacity: 1
+		 btnNext: ".next",
+		 shape: 'tearDrop',
+		 minOpacity: 1,
+		 duration: 1
 	});
 });

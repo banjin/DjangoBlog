@@ -1,14 +1,14 @@
 {% load staticfiles %}
 <html>
 <head>
-<title>爱你我的小宝贝</title>		
+<title>爱你❤我的小宝贝</title>		
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="author" content="ACool">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" href="{% static 'blog/css/style.css' %}" type="text/css" media="all">
 <!--导库-->	
-<script type="text/javascript" src="{% static 'blog/js/jquery.js' %}" ></script>
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js" ></script>
 <!-- 图片幻灯片效果-->	
 <script type="text/javascript" src="{% static 'blog/js/roundabout.js' %}"></script>
 <script type="text/javascript" src="{% static 'blog/js/roundabout_shapes.js' %}"></script>
@@ -105,7 +105,7 @@ document.onmousemove = handlerMM;
 	</div>	
 		<div id="contentToWrite" style="display:none">	
 			<br>
-			亲爱的小红<br>
+			亲爱的小宝贝<br>
 			一时间不知道从哪说起,<br>
 			真爱来了，我们要好好把握。不管面临多大的压力，<br>
 			不管前面的路如何崎岖.不管经历过什么,<br>
@@ -114,7 +114,7 @@ document.onmousemove = handlerMM;
 			从冷漠到关心,从谢绝到依赖，从生疏到相爱,<br>
 			无数个平淡的日子同舟共济，相濡以沫.<br>
 			相信右下角的计时器,将永远继续下去,直至数据溢出.<br><br>
-			--------------------永远爱你的, 小明<br>
+			--------------------永远爱你的, 房小同学<br>
 		</div>		
 	<script type="text/javascript">
 			writeContent(true);
@@ -125,9 +125,9 @@ document.onmousemove = handlerMM;
 		<ul id="myRoundabout">		  	
 			<li><img src="{% static 'blog/img/slide1.jpg' %}" alt=""></li>	
 			<li><img src="{% static 'blog/img/slide2.jpg' %}" alt=""></li>		
-			<li><img src="{% static 'blog/img/slide5.jpg' %}" alt=""></li>		
-			<li><img src="{% static 'blog/img/slide3.jpg' %}" alt=""></li>		
 			<li><img src="{% static 'blog/img/slide4.jpg' %}" alt=""></li>		
+			<li><img src="{% static 'blog/img/slide3.jpg' %}" alt=""></li>		
+			<li><img src="{% static 'blog/img/slide5.jpg' %}" alt=""></li>		
 		</ul>		
 	</div>		
 		<script type="text/javascript">
@@ -144,7 +144,7 @@ document.onmousemove = handlerMM;
 	<script type="text/javascript">	
 	function showTime() { 
 	var currentDate = new Date(); 
-	var startDate = new Date(2017,07,06);
+	var startDate = new Date(2017,06,06);
 	var date3 = currentDate-startDate;
 	var days=Math.floor(date3/(24*3600*1000));
 	var leave1=date3%(24*3600*1000);     //计算天数后剩余的毫秒数
@@ -173,13 +173,60 @@ document.onmousemove = handlerMM;
 
 	setTimeout("showTime()", 40000);			
 	</script>	
-	</div>	
-	<!-- #footer-->		
+	</div>
+<!--	<div align="center">
+	<div style="width: 400px; height:500px; background: url(https://ai.bbai520.com/love/img/iali68.jpg);">
+		<c style="
+				color: #ff0000;
+				font-size: 48px;
+				text-shadow: 3px 3px 3px #666666;
+				font-family:STXihei,"Microsoft YaHei";
+				text-align:center;
+			" >生日快乐!</c>
+		<!--<h2 style="text-align:center">情人节快乐</h2>
+	</div>
+	</div>
+	<script type="text/javascript">
+		setTimeout(move, 15000);
+	</script> --> 
+	<!-- #footer-->
+	
 	<div id="footer">			 
 <div align="center">
 <audio src="{% static 'blog/music/love.mp3' %}" preload controls autoplay loop>
 Your browser does not support the audio element.
-</audio></div>
+</audio>
+<style="background-color:#FFA500;clear:both;text-align:center;">按键盘 "↓" 进入下一页</style></div>
 </div>
+<link rel="stylesheet" href="https://ai.bbai520.com/love/css/all.min.css">
+</head>
+<body>
+	<div class="flowtime">
+		<div class="ft-section">
+			<div id="/section-1/page-1" class="ft-page page-1" data-id="page-1">
+				<p class="text1">小宝贝我❤你一生一世</p>
+			</div>
+			<div class="ft-page full-img" data-id="page-2">
+				<h3>愿得一人心，白首不相离</h3>
+				<img src="{% static 'blog/img/iali20.jpg' %}" alt="愿得一人心，白首不相离" />
+			</div>
+
+			<div class="ft-page page-53" data-id="page-3">
+				<img src="{% static 'blog/img/iali68.jpg' %}" alt="生日快乐" />
+				<h3>生日快乐</h3>
+			</div>
+			<div   class="ft-page page-53" data-id="page-2">
+				<img src="{% static 'blog/img/iali68.jpg' %}" alt="生日快乐" />
+				<h3>生日快乐</h3>
+			</div>
+		</div>
+	</div>
+	
+	<div class="nojavascript">您的浏览器版本太低或禁用了javascript，无法正常浏览本页面</div>
+	
+	
+	<!--<script src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>-->
+	<script src="{% static 'blog/js/all.min.js' %}"></script>
+	<script src="{% static 'blog/js/love.min.js' %}"></script>		
 </body>
 </html>
