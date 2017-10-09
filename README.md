@@ -5,6 +5,7 @@
 - `python manage.py migrate` 迁移数据库
 - 重启 Nginx 和 Gunicorn 使改动生效
 - `gunicorn --bind unix:/tmp/demo.com.socket blog.wsgi:application`
+目前支持：
 - [x] 支持MarkDown
 - [x] 分类与归档
 - [x] 评论
@@ -12,3 +13,4 @@
 - [x] 文章摘要
 - [x] 标签云
 - [x] 分页
+- [ ] 全文搜索
