@@ -25,7 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '_+o&5&qe6m1@_ykk!=1^us55&rffci#up%ac)^f9x$#m6zq4u^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost ', '.blogof33.com']
 #SSL_Setting
@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 	'blogapp',
-    'comments',
+    'disqus',
+    'django.contrib.sites',
 ]
 
 MIDDLEWARE = [
@@ -119,10 +120,12 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
+SITE_ID = 1
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+DISQUS_API_KEY = 'zJgcSUTmWLl94A4JK6kUcyx7fVzoFFiSmF2kll55x0N6zyzTSxXrQmmkjg6ao2rO'
+DISQUS_WEBSITE_SHORTNAME = 'acool'

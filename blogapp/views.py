@@ -3,7 +3,7 @@
 from django.shortcuts import render,get_object_or_404
 from .models import Post,Category
 import markdown
-from comments.forms import CommentForm
+#from comments.forms import CommentForm
 from django.views.generic import ListView,DetailView
 from django.utils.text import slugify
 from markdown.extensions.toc import TocExtension
@@ -25,15 +25,15 @@ def detail(request, pk):
     'markdown.extensions.toc',])
     
     # 记得在顶部导入 CommentForm
-    form = CommentForm()
+    #form = CommentForm()
     # 获取这篇 post 下的全部评论
-    comment_list = post.comment_set.all()
+    #comment_list = post.comment_set.all()
 
     # 将文章、表单、以及文章下的评论列表作为模板变量传给 detail.html 模板，以便渲染相应数据。
-    context = {'post': post,
-               'form': form,
-               'comment_list': comment_list
-               }
+    #context = {'post': post,
+    #           'form': form,
+    #           'comment_list': comment_list
+    #           }
     return render(request, 'blog/detail.html', context=context)
 def category(request,pk):
     cate=get_object_or_404(Category,pk=pk)
@@ -238,15 +238,15 @@ class PostDetailView(DetailView):
         post.toc=md.toc
         return post
 
-    def get_context_data(self, **kwargs):
+ #   def get_context_data(self, **kwargs):
         # 覆写 get_context_data 的目的是因为除了将 post 传递给模板外（DetailView 已经帮我们完成），
         # 还要把评论表单、post 下的评论列表传递给模板。
-        context = super(PostDetailView, self).get_context_data(**kwargs)
-        form = CommentForm()
-        comment_list = self.object.comment_set.all()
-        context.update({
-            'form': form,
-            'comment_list': comment_list
-        })
-        return context
+        #context = super(PostDetailView, self).get_context_data(**kwargs)
+        #form = CommentForm()
+        #comment_list = self.object.comment_set.all()
+        #context.update({
+        #    'form': form,
+        #    'comment_list': comment_list
+        #})
+        #return context
 # Create your views here.
