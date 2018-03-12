@@ -2,6 +2,9 @@
 {% load staticfiles %}
 {% load disqus_tags %}
 {% disqus_show_comments %}
+<a href="{{ object.get_absolute_url }}#disqus_thread" data-disqus-identifier="{{ object.id }}">View Comments</a>
+{% disqus_num_replies %}
+{% disqus_recent_comments shortname 5 50 0 24 %}
 <!DOCTYPE html>
 <html>
 <head>
