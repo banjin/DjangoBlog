@@ -1,8 +1,10 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
+
 {% load disqus_tags %}
+{% disqus_dev %}
 {% disqus_show_comments %}
-<a href="{{ object.get_absolute_url }}#disqus_thread" data-disqus-identifier="{{ object.id }}">View Comments</a>
+<a href="http://blogof33.com/{{post.get_absolute_url}}#disqus_thread" data-disqus-identifier="{{ post.views }}">View Comments</a>
 {% disqus_num_replies %}
 {% disqus_recent_comments shortname 5 50 0 24 %}
 <!DOCTYPE html>
@@ -104,7 +106,10 @@
                             class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank">更多</a>
                         <a class="jiathis_counter_style"></a>
                     </div>
-                    <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+                    <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8">
+                    var disqus_developer = 1;
+                    var disqus_url = 'http://blogof33.com/';
+                    </script>
                 </section>
                 </footer>
             </article>
@@ -114,12 +119,12 @@
 /**
 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-/*
+
 var disqus_config = function () {
-this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+this.page.url = 'http://blogof33.com/{{post.get_absolute_url}}/';  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = '{{post.get_absolute_url}}/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 };
-*/
+
 (function() { // DON'T EDIT BELOW THIS LINE
 var d = document, s = d.createElement('script');
 s.src = 'https://acool.disqus.com/embed.js';
