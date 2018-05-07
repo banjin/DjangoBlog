@@ -11,7 +11,8 @@ url(r'^category/(?P<pk>[0-9]+)/$', views.CategoryView.as_view(), name='category'
 url(r'^contact$',views.contact,name='contact'),
 url(r'^about$',views.about,name='about'),
 url(r'^love$',views.love,name='love'),
-url(r'^flower$',views.flower,name='flower')
+url(r'^flower$',views.flower,name='flower'),
+url(r'^resume$',views.resume,name='resume')
 ]
 #绑定关系的写法是把网址和对应的处理函数作为参数传给 url 函数
 #（第一个参数是网址，第二个参数是处理函数），

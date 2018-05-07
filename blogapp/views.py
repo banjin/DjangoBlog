@@ -47,6 +47,8 @@ def love(request):
     return render(request,'blog/love.html')
 def flower(request):
     return render(request,'blog/flower.html')
+def resume(request):
+    return render(request,'blog/resume.html')
 
 class IndexView(ListView):
     model = Post
