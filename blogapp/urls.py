@@ -10,7 +10,6 @@ url(r'^archives/(?P<year>[0-9]{4})/(?P<month>[0-9]{1,2})/$', views.ArchivesView.
 url(r'^category/(?P<pk>[0-9]+)/$', views.CategoryView.as_view(), name='category'),
 url(r'^contact$',views.contact,name='contact'),
 url(r'^about$',views.about,name='about'),
-url(r'^love$',views.love,name='love'),
 url(r'^flower$',views.flower,name='flower'),
 url(r'^resume$',views.resume,name='resume')
 ]

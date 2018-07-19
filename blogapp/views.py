@@ -43,8 +43,6 @@ def contact(request):
     return render(request,'blog/contact.html')
 def about(request):
     return render(request,'blog/about.html')
-def love(request):
-    return render(request,'blog/love.html')
 def flower(request):
     return render(request,'blog/flower.html')
 def resume(request):
